@@ -15,7 +15,7 @@ async def websocket_endpoint(websocket: WebSocket):
         # Nếu nhận được dữ liệu từ ESP8266
         if data == "Activate Cam":
             # Gửi yêu cầu GET đến URL mong muốn
-            url = "https://lab-moving-grizzly.ngrok-free.app/api/model/predict_image_from_esp32/"
+            url = "http://192.168.114.239:8888/api/model/predict_image_from_esp32/"
             try:
                 response = requests.get(url)
                 if response.status_code == 200:
